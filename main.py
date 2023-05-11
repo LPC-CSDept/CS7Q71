@@ -17,7 +17,6 @@ def makeList():
         students.append(d)
         # print (values)
 
-    print(students)
     return students
 
 
