@@ -18,14 +18,10 @@ def test_main_1():
     lines = captureOut.getvalue().split('\n')
     print(lines)
 
-    number = [35, 5, 10, 20, 40, 15]
-    main.bubble(number)
-    assert number[0] == 5
-    assert number[1] == 10
-    assert number[2] == 20
-    assert number[3] == 35
-    assert number[4] == 15
-    assert number[5] == 40
+    students = main.makeList()
+    assert len(students) == 5
+    main.printList(students)
+
     # regex_string = r'[\w,\W]*1'
     # regex_string += r'[\w,\W]*3'
     # regex_string += r'[\w,\W]*5'
@@ -34,5 +30,3 @@ def test_main_1():
     # res = re.search(regex_string, main.evenlist)
     # assert res != None
     # print(res.group())
-    main.bubblesort(number)
-    assert number == sorted(number)
