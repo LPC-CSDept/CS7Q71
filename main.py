@@ -7,15 +7,6 @@ def makeList():
     ##################################################
     # Code your program here
     ##################################################
-    df = pd.read_excel('students.xls')
-    keys = ['id', 'name', 'scores']
-    students = []
-    for i in range(df.shape[0]):
-        scores = list(df.iloc[i][2:])
-        values = [df.iloc[i][0], df.iloc[i][1], scores]
-        d = (dict(zip(keys, values)))
-        students.append(d)
-        # print (values)
 
     return students
 
@@ -28,31 +19,21 @@ def printList(students):
 
 
 def scorebySubject(students):
-    scorelist = []
-    keys = ['1st', '2nd', '3rd', '4th']
-    for student in students:
-        scorelist.append(student['scores'])
-    retdict = dict(zip(keys, zip(*scorelist)))
-    return retdict
-
-
-def gt330(x): return sum(x['scores']) > 330
+    ##################################################
+    # Code your program here
+    ##################################################
 
 
 def findStudents(students):
-    fobj = filter(gt330, students)
-    return list(fobj)
-
-
-def getAvg(x, y): return x + y
+    ##################################################
+    # Code your program here
+    ##################################################
 
 
 def getAvgList(students):
-    retlst = []
-    for student in students:
-        savg = reduce(getAvg, student['scores']) / len(student['scores'])
-        retlst.append(savg)
-    return retlst
+    ##################################################
+    # Code your program here
+    ##################################################
 
 
 def main():
